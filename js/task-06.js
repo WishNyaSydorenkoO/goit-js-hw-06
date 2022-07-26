@@ -4,10 +4,9 @@ validationInput.addEventListener("blur", (event) => {
   if (event.currentTarget.value.length === Number(rightAmount.dataset.length)) {
     validationInput.classList.add("valid");
     validationInput.classList.remove("invalid");
-  } else if (event.currentTarget.value.length > 0) {
+  } else {
+    validationInput.classList.remove("valid");
     validationInput.classList.add("invalid");
-  } else if (event.currentTarget.value.length === 0) {
-    validationInput.classList.remove("invalid", "valid");
   }
 });
 console.log(rightAmount.dataset.length);
